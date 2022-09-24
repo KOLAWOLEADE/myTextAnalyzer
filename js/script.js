@@ -30,7 +30,25 @@ function NumberOfOccurrencesInText(appearance){
 let counter = 0
 const counterArray = counter.split(" ");
 counterArray.forEach(function(element){
-
+    if (element => 1 )
+    counter++;
 })
+
+return counter;
+
+
+
+
+
+
+
+
+
+
+
+
+// UI LOGIC
+
+
 
 
