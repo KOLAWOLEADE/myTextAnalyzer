@@ -1,40 +1,65 @@
+function noInputtedWord(word,text){
+    ((word.trim().length === 0) || (text.trim().length === 0))
+    return 0;
+    }
+  
+    // word counter
+  function wordCounter(text) {
+      if (text.trim().length === 0) {
+  
+      }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // BUSINESS LOGIC
 
-//  WORDCOUNTER
+// function wordCounter(sentence){
+//     if (sentence.trim().lenght ===0){
 
-function wordCounter(counter){
-    if (counter.trim().lenght ===0){
+//         return 0;
+//     }
+// let counters = 0
+// const counterArray = sentence.split(" ");
+// counterArray.forEach(function(element){
+//     if (!Number(element)){
+//         counters++;
+//     }
 
-        return 0;
-    }
-let counter = 0
-const counterArray = counter.split(" ");
-counterArray.forEach(function(element){
-    if (!Number(element)){
-        counter++;
-    }
+// }) 
+//    return counters;
 
-}) 
-   return counter;
+// }
 
-}
+// console.log(element)
 
+// const sentence = "to to  go bum hi lo bum bum Bum"
+// const newArr = []
+// const sentenceArr = sentence.split()
 
-// Appearance
+// for ( let word of sentenceArr) {
+//     if (!newArr[word]) {
+//         newArr[word] = 1;
+//     }
 
-function NumberOfOccurrencesInText(appearance){
-    if (counter.trim().length === 0);
-    return 0;
-}
-
-let counter = 0
-const counterArray = counter.split(" ");
-counterArray.forEach(function(element){
-    if (element => 1 )
-    counter++;
-})
-
-return counter;
+//     else {
+//         newArr[word]++
+    
+//     }
+// }
 
 
 
@@ -43,11 +68,54 @@ return counter;
 
 
 
+// function NumberOfOccurrencesInSentence(sentence){
+//     if (sentence.trim().length === 0 );{
+
+//         return 0;
+//     }
+
+//     const counterArray = sentence.split(" ");
+//     let counters = 0;
+//     counterArray.forEach(function(element){
+//     if (element > 0) {
+
+//         counters++;
+
+//     }
+    
+// });
+
+// return counters;
+
+// }
 
 
 
 
-// UI LOGIC
+// UI LOGIC 
+
+
+// $(document).ready(function(){
+//     $("form#myTestAnalyzer").submit(function(event){
+//       event.preventDefault();
+
+//       const counter = $("#counter").val();
+
+//       $("#highestCount").html(counters)
+
+
+
+
+    //   const passage = $("#text-passage").val();
+    //   const word = $("#word").val();
+    //   const wordCount = wordCounter(passage);
+    //   const occurrencesOfWord = numberOfOccurrencesInText(word, passage);
+    //   $("#total-count").html(wordCount);
+    //   $("#selected-count").html(occurrencesOfWord);
+    //   $("#bolded-passage").html(boldPassage(word, passage));
+//     });
+//   });
+
 
 
 
