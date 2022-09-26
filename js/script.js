@@ -36,6 +36,27 @@ function noInputtedWord(word,text){
   }
 
 
+  //   function to bold text
+function boldPassage(word, text) {
+    if(noInputtedWord(word,text)){
+      return ""
+    }
+      let htmlString = "<p>";
+      let textArray = text.split(" ");
+      textArray.forEach(function(element, index) {
+        if (element.toLowerCase().includes(word.toLowerCase()))  {
+          htmlString = htmlString.concat( ("<b>" + word + "</b>"));
+        } else {
+          htmlString = htmlString.concat(element);
+        }
+        if (index !== (textArray.length - 1)) {
+          htmlString = htmlString.concat(" ");
+        }
+      });
+      return htmlString + "</p>";
+    }
+
+
 
 
 
