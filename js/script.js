@@ -57,6 +57,16 @@ function boldPassage(word, text) {
     }
 
 
+    //UI Logic
+$(document).ready(function(){
+    $("form#word-counter").submit(function(event){
+      event.preventDefault();
+      const text = $("#text-passage").val();
+      const word = $("#word").val();
+      const wordCount = wordCounter(text);
+      const occurrencesOfWord = numberOfOccurrencesInText(word, text);
+
+
 
 
 
