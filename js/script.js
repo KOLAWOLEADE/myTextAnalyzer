@@ -9,6 +9,16 @@ function noInputtedWord(word,text){
   
       }
 
+      let wordCount = 0;
+      const wordArray = text.split(" ");
+      wordArray.forEach(function(element) {
+        if (!Number(element)) {
+          wordCount++;
+        }
+      });
+      return wordCount;
+    }
+
 
 
 
