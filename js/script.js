@@ -109,19 +109,26 @@ function boldPassage(word, text) {
 
   // offensiveWord
 
+  const offensiveWords= "zoinks, muppeteer, biffaroni, and loopdaloop"
+
   function offensiveWord(text){
-    const offensiveWord= "zoinks, muppeteer, biffaroni, and loopdaloop"
     const openArr= [];
     const  word = text.split(" ");
 
     word.forEach(function(element){
-      if( (element.toLowerCase().includes(word.toLowerCase())) ){
+      if( offensiveWords.includes(element)){
 
-        openArr.push(word)
+        openArr.push(quit)
 
       }
+      else{ openArr.push(element)}
+    
 
-    })
+    });
+ 
+    let result = openArr.join(" ");
+    return result
+    
 
 
 
@@ -139,10 +146,12 @@ $(document).ready(function(){
       const wordCount = wordCounter(text);
       const occurrencesOfWord = numberOfOccurrencesInText(word, text);
       const mostwords = topThreeWords(text)
+      const offensive = offensiveWord(text)
       $("#total-count").html(wordCount);
       $("#selected-count").html(occurrencesOfWord);
       $("#bolded-passage").html(boldPassage(word, text));
       $("#most").html(mostwords);
+      $("#OffensiveWords").html(offensive)
 
 
         // most used words
