@@ -4,6 +4,7 @@ function noInputtedWord(word,text){
   }
 
   // word counter
+
 function wordCounter(text) {
     if (text.trim().length === 0) {
 
@@ -20,6 +21,7 @@ function wordCounter(text) {
 
 
   // number of occurences
+
   function numberOfOccurrencesInText(word, text) {
     if (word.trim().length === 0) {
       return 0;
@@ -35,6 +37,7 @@ function wordCounter(text) {
   }
 
 //   function to bold text
+
 function boldPassage(word, text) {
   if(noInputtedWord(word,text)){
     return ""
@@ -76,12 +79,9 @@ function boldPassage(word, text) {
 
   // }
 
+  // Topwords
 
   function topThreeWords(text) {
-    //  if (errorCheck(text)) {
-    //   return 0;
-    // }
-    // let text = filterSentence(text);
     let textArray = text.split(" ");
     let topmost = 0;
     let topmostWord = "";
@@ -107,27 +107,59 @@ function boldPassage(word, text) {
     return result;
   }
 
-  // offensiveWord
 
-  const offensiveWords= "zoinks, muppeteer, biffaroni, and loopdaloop"
+  // OffensiveWord
+
+  const zoniks = "zoinks"
+  const wrongWord = "muppeteer"
+  const offenceWord = "biffaroni"
+  const arrogantWord = "loopdaloop"
 
   function offensiveWord(text){
     const openArr= [];
     const  word = text.split(" ");
 
     word.forEach(function(element){
-      if( offensiveWords.includes(element)){
+      if( zoniks.includes(element)){
 
-        openArr.push(quit)
+        openArr.push(zoniks)
+
+        console.log(zoniks)
 
       }
-      else{ openArr.push(element)}
+
+      else if (
+        wrongWord.includes(element)) {
+          openArr.push(wrongWord)
+
+          console.log(wrongWord)
+        }
+
+        else if (
+          offenceWord.includes(element)){
+          openArr.push(offenceWord)
+
+        console.log(offenceWord)
+
+          }
+
+          else if (arrogantWord.includes(element)){
+            openArr.push(arrogantWord)
+
+            console.log(arrogantWord)
+          }
+
+
+       else{ openArr.push(element)
+      }
     
 
     });
  
     let result = openArr.join(" ");
-    return result
+    // return result
+
+    console.log(result)
     
 
 
@@ -138,6 +170,7 @@ function boldPassage(word, text) {
 
 
 //UI Logic
+
 $(document).ready(function(){
     $("form#myTestAnalyzer").submit(function(event){
       event.preventDefault();
@@ -151,19 +184,10 @@ $(document).ready(function(){
       $("#selected-count").html(occurrencesOfWord);
       $("#bolded-passage").html(boldPassage(word, text));
       $("#most").html(mostwords);
-      $("#OffensiveWords").html(offensive)
+      $("#OffensiveWords").html(offensive);
 
 
-        // most used words
-  // let most = [];
-  // let usedWords = text.split(" ");
-  // usedWords.forEach(function(element){
-  //   most.push(element);
-  // })
-  // most.forEach(function(element, index){
-  //   let str = "<li>"
-  //   $("#most").append(str + element + " " + most[index])
-  // })
+
     })
   });
 
