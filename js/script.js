@@ -18,7 +18,7 @@ function wordCounter(text) {
     return wordCount;
   }
 
-  
+
   // number of occurences
   function numberOfOccurrencesInText(word, text) {
     if (word.trim().length === 0) {
@@ -59,19 +59,19 @@ function boldPassage(word, text) {
    // wordsCounter
 
   function repeatedWords(text){
-    const chars = [];
+    const emptyarr= [];
     const arr = text.split(" ");
   
     for (let word of arr ) {
-      if (!chars[word]){
-        chars[word] = 1;
+      if (!emptyarr[word]){
+        emptyarr[word] = 1;
       }
       else{
-        chars[word]++;
+        emptyarr[word]++;
       }
     }
   
-    console.log(chars);
+    console.log(emptyarr);
    
 
   }
