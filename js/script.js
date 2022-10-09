@@ -159,7 +159,7 @@ function boldPassage(word, text) {
     let result = openArr.join(" ");
     // return result
 
-    console.log(result)
+    console.log(element)
     
 
 
@@ -180,11 +180,12 @@ $(document).ready(function(){
       const occurrencesOfWord = numberOfOccurrencesInText(word, text);
       const mostwords = topThreeWords(text)
       const offensive = offensiveWord(text)
+
       $("#total-count").html(wordCount);
       $("#selected-count").html(occurrencesOfWord);
       $("#bolded-passage").html(boldPassage(word, text));
       $("#most").html(mostwords);
-      $("#OffensiveWords").html(offensive);
+      $("#OffensiveWords").text(offensive);
 
 
 
