@@ -159,7 +159,7 @@ function boldPassage(word, text) {
     let result = openArr.join(" ");
     // return result
 
-    console.log(element)
+    console.log(result)
     
 
 
